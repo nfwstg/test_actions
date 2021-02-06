@@ -13,7 +13,7 @@ setup(
         name="test_action",
         version="0.1.0",
         license="MIT",
-        description="Test Git Actions"
+        description="Test Git Actions",
         author="nfwstg@gmail.com",
         url="",
         packages=find_packages("src"),
