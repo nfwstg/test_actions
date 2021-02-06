@@ -10,24 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: python setup.py pytest
+      - run: python3 setup.py pytest
   test_ubuntu_16:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
-      - run: python setup.py pytest
+      - run: python3 setup.py pytest
   test_ubuntu_20:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - run: python setup.py pytest
+      - run: python3 setup.py pytest
   test_macos_10:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - run: python setup.py pytest
+      - run: python3 setup.py pytest
   test_winsv:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - run: python setup.py pytest
+      - run: python3 setup.py pytest
