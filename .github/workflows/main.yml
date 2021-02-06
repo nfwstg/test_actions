@@ -6,28 +6,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  test_ubuntu_18:
-    runs-on: ubuntu-latest
+  test_all:
+    runs-on: ${{matrix.os}}
     steps:
       - uses: actions/checkout@v2
       - run: python3 setup.py pytest
-  test_ubuntu_16:
-    runs-on: ubuntu-16.04
-    steps:
-      - uses: actions/checkout@v2
-      - run: python3 setup.py pytest
-  test_ubuntu_20:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-      - run: python3 setup.py pytest
-  test_macos_10:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: python3 setup.py pytest
-  test_winsv:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: python3 setup.py pytest
+
+  strategy:
+    matrix:
+      os: [ubuntu-latest, ubuntu-16.04, ubuntu-20.04, macos-latest, windows-latest]
