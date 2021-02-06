@@ -1,2 +1,1 @@
-# test_actions
-Test Github Actions
+# test_action
